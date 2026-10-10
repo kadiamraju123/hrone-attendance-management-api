@@ -10,27 +10,17 @@ FastAPI + MongoDB implementation for the HROne Software Engineer Trainee assignm
 
 ## Run locally (Windows PowerShell)
 
-```powershell
-python -m venv .venv
-.\.venv\Scripts\Activate.ps1
-pip install -r requirements.txt
-```
+python -m venv .venv .\\.venv\Scripts\Activate.ps1 pip install -r requirements.txt
 
 Create a local `.env` file in the project root (do not commit it):
 
-```env
-MONGO_URI=mongodb://127.0.0.1:27017
-MONGO_DB=attendance_db
-```
+MONGO_URI=mongodb://127.0.0.1:27017 MONGO_DB=attendance_db
 
 Make sure the MongoDB service is running, then seed the sample data and start the API:
 
-```powershell
-python sample_seed.py
-python -m uvicorn app.main:app --port 8000 --reload
-```
+python sample_seed.py python -m uvicorn app.main:app --port 8000 --reload
 
-Open Swagger UI at <http://127.0.0.1:8000/docs>. The application creates its indexes at startup. `sample_seed.py` resets the two sample collections before loading data, so use it only when resetting local sample data is acceptable.
+Open Swagger UI at [http://127.0.0.1:8000/docs](http://127.0.0.1:8000/docs). The application creates its indexes at startup. `sample_seed.py` resets the two sample collections before loading data, so use it only when resetting local sample data is acceptable.
 
 ## Endpoints
 
