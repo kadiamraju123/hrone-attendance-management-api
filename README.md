@@ -11,7 +11,6 @@ FastAPI + MongoDB implementation for the HROne Software Engineer Trainee assignm
 ## Run locally (Windows PowerShell)
 
 ```powershell
-cd candidate_kit
 python -m venv .venv
 .\.venv\Scripts\Activate.ps1
 pip install -r requirements.txt
